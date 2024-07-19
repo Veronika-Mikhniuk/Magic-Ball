@@ -40,13 +40,13 @@ body {
     cursor: pointer;
     overflow: hidden;
     box-shadow: 0 0 115px rgba(0, 0, 0, 0.5), inset 0 0 30px rgba(255, 255, 255, 0.116);
-    transition: transform 1s ease;
+    transition: transform 0.3s ease;
     will-change: transform;
 }
 
 
 .magic-ball:hover {
-    transform: scale(1.05) translateZ(0);
+    transform: scale(1.02) translateZ(0);
     transform-origin: center;
 }
 .magic-ball:active {
@@ -107,10 +107,34 @@ body {
     .magic-ball {
         width: 300px;
         height: 300px;
+        transition: all 0.3s ease;
     }
 
     .title {
         font-size: 24px;
+    }
+
+    .magic-ball:hover {
+        transform: none;
+    }
+
+    .magic-ball:active {
+        animation: scale-animation 0.3s;
+    }
+    
+    @keyframes scale-animation {
+        0% {
+            transform: scale(1)translateZ(0);
+            transform-origin: center;
+        }
+        50% {
+            transform: scale(0.97)translateZ(0);
+            transform-origin: center;
+        }
+        100% {
+            transform: scale(1)translateZ(0);
+            transform-origin: center;
+        }
     }
 }
 
