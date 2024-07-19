@@ -107,6 +107,7 @@ body {
     .magic-ball {
         width: 300px;
         height: 300px;
+        -webkit-transition: all 0.3s ease;
         transition: all 0.3s ease;
     }
 
@@ -124,16 +125,16 @@ body {
     
     @keyframes scale-animation {
         0% {
-            transform: scale(1)translateZ(0);
-            transform-origin: center;
+            -webkit-transform: scale(1);
+            transform: scale(1);
         }
         50% {
-            transform: scale(0.97)translateZ(0);
-            transform-origin: center;
+            -webkit-transform: scale(0.97);
+            transform: scale(0.97);
         }
         100% {
-            transform: scale(1)translateZ(0);
-            transform-origin: center;
+            -webkit-transform: scale(1);
+            transform: scale(1);
         }
     }
 }
